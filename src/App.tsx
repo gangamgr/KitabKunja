@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Home from './Page/Home';
-import Toolbar from './Component/Toolbar';
-import Footer from './Component/Footer';
-import Flip from './Page/Flip';
 import {  BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Page/Home';
 import Layout from './Layout/Layout';
+import Contact from './Page/Contact';
+import Shop from './Page/Shop';
 
 
 function App() {
@@ -15,7 +14,9 @@ function App() {
       <Router>
         <Layout>
           <Routes>
-            <Route path='/' element={<Home />}/>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/contact' element={<Contact/>}/>
+            <Route path='/shop' element={<Shop/>}/>
           </Routes>
         </Layout>
       </Router>
